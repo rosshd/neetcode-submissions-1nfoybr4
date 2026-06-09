@@ -39,7 +39,7 @@ from typing import *
 # @leet start
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
-        closest = float(inf)
+        closest = inf
         nums.sort()
         for slow in range(len(nums) - 2):
             l, r = slow + 1, len(nums) - 1
