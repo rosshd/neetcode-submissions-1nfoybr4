@@ -45,12 +45,12 @@ class Solution:
             l, r = slow + 1, len(nums) - 1
             while l < r:
                 total = nums[slow] + nums[l] + nums[r]
-                if abs(target - total) < abs(closest):
+                if abs(target - total) < abs(closest - total):
                     closest = total
                 if target - total > 0:
-                    r -= 1
-                else:
                     l += 1
+                else:
+                    r -= 1
         return closest
 
 
